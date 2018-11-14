@@ -1,0 +1,30 @@
+{
+  "name": "ecv-validation",
+  "version": "0.1.0",
+  "description": "Form validation micro-framework",
+  "main": "dist/index.js",
+  "author": "Pedro Nascimento <lobo@estudar.com.vc>",
+  "license": "MIT",
+  "typings": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn run -s clean && tsc",
+    "clean": "rimraf ./dist/",
+    "test": "jest --config jest.json",
+    "lint": "tslint --project . --fix && prettier --write lib/**/*.ts && prettier --write tests/**/*.ts",
+    "docs": "./scripts/docs.sh",
+    "start": "$(cd docs/ && serve -p ${PORT:-3030})"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.7",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "typescript": "^3.1.6"
+  }
+}
