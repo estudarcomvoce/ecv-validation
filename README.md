@@ -4,6 +4,15 @@ ecv-validation
 A declarative form validation micro-framework 
 
 # Getting started
+```bash
+# add to your dependnecies
+
+# yarn
+$ yarn add "estudarcomvoce/ecv-validation#master"
+
+# npm
+$ npm install "github:estudarcomvoce/ecv-validation#master"
+```
 
 
 ## Defining a validation
