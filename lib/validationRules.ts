@@ -5,7 +5,7 @@ export type ValidationRule<T = {}> = (alias: string, value: any, data?: FormData
 
 export function lessThan(threshold: number):ValidationRule {
   return (alias: string, value: number) => {
-    if (value >= threshold) {
+    if (value && value >= threshold) {
       return {
         error: `${alias} deve ser menor que ${threshold} `,
         invalid: true,
@@ -20,7 +20,7 @@ export function lessThan(threshold: number):ValidationRule {
 
 export function lessThanOrEqual(threshold: number):ValidationRule {
   return (alias: string, value: number) => {
-    if (value > threshold) {
+    if (value && value > threshold) {
       return {
         error: `${alias} deve ser menor ou igual a que ${threshold} `,
         invalid: true,
@@ -35,7 +35,7 @@ export function lessThanOrEqual(threshold: number):ValidationRule {
 
 export function largerThan(threshold: number):ValidationRule {
   return (alias: string, value: number) => {
-    if (value <= threshold) {
+    if (value && value <= threshold) {
       return {
         error: `${alias} deve ser maior que ${threshold} `,
         invalid: true,
@@ -50,7 +50,7 @@ export function largerThan(threshold: number):ValidationRule {
 
 export function largerThanOrEqual(threshold: number):ValidationRule {
   return (alias: string, value: number) => {
-    if (value < threshold) {
+    if (value && value < threshold) {
       return {
         error: `${alias} deve ser maior ou igual a ${threshold} `,
         invalid: true,
@@ -64,8 +64,8 @@ export function largerThanOrEqual(threshold: number):ValidationRule {
 }
 
 export function longerThan(threshold: number):ValidationRule {
-  return (alias: string, value: number) => {
-    if (value <= threshold) {
+  return (alias: string, value: string) => {
+    if (value && value.length <= threshold) {
       return {
         error: `${alias} deve ser maior que ${threshold} caracteres`,
         invalid: true,
@@ -79,8 +79,8 @@ export function longerThan(threshold: number):ValidationRule {
 }
 
 export function shorterThan(threshold: number):ValidationRule {
-  return (alias: string, value: number) => {
-    if (value > threshold) {
+  return (alias: string, value: string) => {
+    if (value && value.length > threshold) {
       return {
         error: `${alias} deve ser maior que ${threshold} caracteres`,
         invalid: true,
