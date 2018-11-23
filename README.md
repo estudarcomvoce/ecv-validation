@@ -3,6 +3,9 @@ ecv-validation
 
 A declarative form validation micro-framework 
 
+# Examples
+See the example app at https://github.com/estudarcomvoce/ecv-validation-example
+
 # Getting started
 ```bash
 # add to your dependnecies
