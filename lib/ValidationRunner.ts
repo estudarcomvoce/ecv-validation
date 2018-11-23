@@ -44,11 +44,11 @@ export default class ValidationRunner<T extends {}> {
         const { error, invalid } = validation.validate(data[key]);
 
         if (invalid) {
-          (internalFormData.errors as any)[name] = error;
-          (internalFormData.invalid as any)[name] = true;
+          (internalFormData.errors as any)[key] = error;
+          (internalFormData.invalid as any)[key] = true;
         } else {
-          (internalFormData.errors as any)[name] = undefined;
-          (internalFormData.invalid as any)[name] = false;
+          (internalFormData.errors as any)[key] = undefined;
+          (internalFormData.invalid as any)[key] = false;
         }
       }
     }
