@@ -1,6 +1,6 @@
-import FormData from './FormData';
+import ValidationData from './ValidationData';
 
-export type ValidationRule<T = {}> = (alias: string, value: any, data?: FormData<T>) => 
+export type ValidationRule<T = {}> = (alias: string, value: any, data?: ValidationData<T>) => 
   { invalid: boolean, error: string};
 
 export function lessThan(threshold: number):ValidationRule {
@@ -107,8 +107,8 @@ export const required: ValidationRule = (alias: string, value: number) => {
 };
 
 export function largerthanField<T>(fieldName: string, fieldNameAlias: string): ValidationRule {
-  return (alias: string, value: number, data: FormData<T>) => {
-    if (value <= (data.values as any)[fieldName]) {
+  return (alias: string, value: number, data: ValidationData<T>) => {
+    if (value <= (data.data as any)[fieldName]) {
       return {
         error: `${alias} deve ser menor que ${fieldNameAlias}`,
         invalid: true,
