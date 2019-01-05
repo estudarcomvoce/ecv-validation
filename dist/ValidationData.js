@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Helper function to create a validation data object with errors and invalid fields empty
+ * @param data The starting data
+ */
+function ValidationDataFactory(data) {
+    return {
+        errors: {},
+        invalid: {},
+        data: data,
+    };
+}
+exports.ValidationDataFactory = ValidationDataFactory;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVmFsaWRhdGlvbkRhdGEuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9saWIvVmFsaWRhdGlvbkRhdGEudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFNQTs7O0dBR0c7QUFDSCxTQUFnQixxQkFBcUIsQ0FBSSxJQUFRO0lBQy9DLE9BQU87UUFDTCxNQUFNLEVBQUUsRUFBRTtRQUNWLE9BQU8sRUFBRSxFQUFFO1FBQ1gsSUFBSSxFQUFFLElBQUk7S0FDWCxDQUFDO0FBQ0osQ0FBQztBQU5ELHNEQU1DIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgaW50ZXJmYWNlIFZhbGlkYXRpb25EYXRhPFQ+IHtcbiAgZXJyb3JzOiB7IFtLIGluIGtleW9mIFRdPzogc3RyaW5nIH07XG4gIGludmFsaWQ6IHsgW0sgaW4ga2V5b2YgVF0/OiBib29sZWFuIH07XG4gIGRhdGE6IFQ7XG59XG5cbi8qKlxuICogSGVscGVyIGZ1bmN0aW9uIHRvIGNyZWF0ZSBhIHZhbGlkYXRpb24gZGF0YSBvYmplY3Qgd2l0aCBlcnJvcnMgYW5kIGludmFsaWQgZmllbGRzIGVtcHR5XG4gKiBAcGFyYW0gZGF0YSBUaGUgc3RhcnRpbmcgZGF0YVxuICovXG5leHBvcnQgZnVuY3Rpb24gVmFsaWRhdGlvbkRhdGFGYWN0b3J5PFQ+KGRhdGE/OiBUKTogVmFsaWRhdGlvbkRhdGE8VD4ge1xuICByZXR1cm4ge1xuICAgIGVycm9yczoge30sXG4gICAgaW52YWxpZDoge30sXG4gICAgZGF0YTogZGF0YSxcbiAgfTtcbn0iXX0=

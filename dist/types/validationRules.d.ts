@@ -1,5 +1,5 @@
-import FormData from './FormData';
-export declare type ValidationRule<T = {}> = (alias: string, value: any, data?: FormData<T>) => {
+import ValidationData from './ValidationData';
+export declare type ValidationRule<T = {}> = (alias: string, value: any, data?: ValidationData<T>) => {
     invalid: boolean;
     error: string;
 };
