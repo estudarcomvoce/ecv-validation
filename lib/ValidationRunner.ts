@@ -3,7 +3,7 @@ import ValidationData, { ValidationDataFactory } from './ValidationData';
 import { createHash } from 'crypto';
 
 export default class ValidationRunner<T extends {}> {
-  protected validity: { [s: string]: boolean };
+  protected validity: { [s: string]: boolean } = {};
   protected validations: { [s: string]: Validation<T>};
 
   constructor(...validations: Validation<T>[]) {
